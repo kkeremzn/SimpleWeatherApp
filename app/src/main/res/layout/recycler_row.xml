@@ -1,0 +1,172 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/rbackground"
+    android:layout_margin="15dp">
+
+    <!-- ÜST BÖLÜM: Şehir + Bugün & Hava durumu simgesi + sıcaklık -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Sol taraf: Şehir & Bugün -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="İstanbul"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bugün"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <!-- Sağ taraf: Hava simgesi & sıcaklık -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center|end">
+
+            <ImageView
+                android:id="@+id/todayimage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_02d"
+                android:layout_marginRight="60dp" />
+
+            <TextView
+                android:id="@+id/todaytemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25°C"
+                android:textSize="32sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Alt boşluk -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <!-- ALT BÖLÜM: 3 günlük tahmin -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Gün 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="07 Haz"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/tomorrowimage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_01d" />
+
+            <TextView
+                android:id="@+id/tomorrowtemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23°C"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <!-- Gün 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08 Haz"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/day2image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_13d" />
+
+            <TextView
+                android:id="@+id/day2temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21°C"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <!-- Gün 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/day3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09 Haz"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/day3image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_50d" />
+
+            <TextView
+                android:id="@+id/day3temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27°C"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
